@@ -3,9 +3,9 @@ CREATE OR REPLACE FUNCTION kolizja_zajec(czas1_poczatek TIMESTAMP, czas1_koniec 
 BEGIN
   IF ((czas1_poczatek < czas2_koniec AND czas1_koniec > czas2_poczatek) OR
      (czas1_koniec > czas2_poczatek AND czas1_poczatek < czas2_koniec)) THEN
-    wynik := 1; -- TRUE
+    wynik := 1;
   ELSE
-    wynik := 0; -- FALSE
+    wynik := 0;
   END IF;
   RETURN wynik;
 END kolizja_zajec;

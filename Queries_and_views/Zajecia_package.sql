@@ -1,6 +1,3 @@
--- Tworzenie sekwencji do generowania ID
-CREATE SEQUENCE zajecia_seq START WITH 1;
-
 CREATE OR REPLACE TYPE termin_info AS OBJECT (
     godz_rozpoczecia TIMESTAMP,
     dzien_tygodnia NUMBER,
@@ -47,7 +44,6 @@ BEGIN
 END;
 /
 
--- Tworzenie funkcji do zwracania typu sali
 CREATE OR REPLACE FUNCTION znajdz_typ_sali (typ_zajec IN VARCHAR2) 
 RETURN VARCHAR2 IS
     typ_sali VARCHAR2(20);
@@ -62,7 +58,6 @@ BEGIN
 END;
 /
 
--- Modyfikowanie procedury
 CREATE OR REPLACE PROCEDURE dodaj_zajecia (
     typ_zajec VARCHAR2,
     id_przedmiotu INTEGER,
@@ -72,16 +67,13 @@ CREATE OR REPLACE PROCEDURE dodaj_zajecia (
     wolny_termin termin_info;
     nowe_id_zajec zajecia.id_zajec%TYPE;
 BEGIN
-    -- Określenie typu sali w zależności od typu zajęć
     typ_sali := znajdz_typ_sali(typ_zajec);
     
-    -- Wyszukiwanie wolnego terminu
     wolny_termin := znajdz_wolny_termin(typ_sali);
     IF wolny_termin IS NULL THEN
         RAISE_APPLICATION_ERROR(-20001, 'Brak wolnych terminów');
     END IF;
     
-    -- Wstawienie nowych zajęć z wykorzystaniem sekwencji do generowania ID
     nowe_id_zajec := zajecia_seq.NEXTVAL;
     INSERT INTO zajecia (id_zajec, typ_zajec, id_przedmiotu, id_pracownika, nr_sali, dzien_tygodnia, godz_rozpoczecia)
     VALUES (nowe_id_zajec, typ_zajec, id_przedmiotu, id_pracownika, wolny_termin.nr_sali, wolny_termin.dzien_tygodnia, wolny_termin.godz_rozpoczecia);

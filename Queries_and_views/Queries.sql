@@ -3,14 +3,14 @@ CREATE OR REPLACE PACKAGE queries AS
 PROCEDURE zajecia_studenta(p_id_studenta INTEGER);
 PROCEDURE zajecia_pracownika(p_id_pracownika INTEGER);
 PROCEDURE studenci_na_zajeciach(p_id_zajec INTEGER);
-PROCEDURE studenci_na_semestrze_i_kierunku(p_semestr INTEGER, p_id_kierunku INTEGER);
+PROCEDURE studenci_semestr_kierunek(p_semestr INTEGER, p_id_kierunku INTEGER);
 PROCEDURE zajecia_w_sali(p_nr_sali VARCHAR2);
 PROCEDURE pracownicy_studenta(p_id_studenta INTEGER);
 
-END zapytania;
+END queries;
 /
 
-CREATE OR REPLACE PACKAGE BODY zapytania AS
+CREATE OR REPLACE PACKAGE BODY queries AS
 
 PROCEDURE zajecia_studenta(p_id_studenta INTEGER) IS
 BEGIN
@@ -37,13 +37,13 @@ BEGIN
     WHERE zs.id_zajec = p_id_zajec;
 END studenci_na_zajeciach;
 
-PROCEDURE studenci_na_semestrze_i_kierunku(p_semestr INTEGER, p_id_kierunku INTEGER) IS
+PROCEDURE studenci_semestr_kierunek(p_semestr INTEGER, p_id_kierunku INTEGER) IS
 BEGIN
     SELECT s.*
     FROM student s
     JOIN przedmiot p ON s.semestr = p.semestr
     WHERE p.semestr = p_semestr AND p.id_kierunku = p_id_kierunku;
-END studenci_na_semestrze_i_kierunku;
+END studenci_semestr_kierunek;
 
 PROCEDURE zajecia_w_sali(p_nr_sali VARCHAR2) IS
 BEGIN
