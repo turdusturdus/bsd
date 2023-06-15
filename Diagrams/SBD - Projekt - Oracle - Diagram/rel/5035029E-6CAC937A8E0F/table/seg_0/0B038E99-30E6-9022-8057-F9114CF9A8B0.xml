@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B038E99-30E6-9022-8057-F9114CF9A8B0" name="Zajecia">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>79C902AE-0568-14DE-C717-4EDCC3E38496</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_zajec" id="9CDA9950-92FC-54AC-07B3-DA273676F111">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>45E43846-B64F-53B3-AB69-725B5299BD00</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Godz_rozpoczecia" id="B74E5834-7FD8-39E4-E607-8EAF0ED41DD2">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>33C33AD7-C441-FD87-1D7E-41084ADABBCD</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Godz_zakonczenia" id="E69A2F55-A19F-EFFA-415E-1B6456D52C7E">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-13 11:05:03 UTC</createdTime>
+<generatorID>33C33AD7-C441-FD87-1D7E-41084ADABBCD</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dzien_tygodnia" id="9AE764A4-4176-2AA3-0605-D62D1874DE61">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>56F276AD-74ED-9547-669A-348D21551B76</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<listOfValues>
+<valueDef value="1" description=""/>
+<valueDef value="2" description=""/>
+<valueDef value="3" description=""/>
+<valueDef value="4" description=""/>
+<valueDef value="5" description=""/>
+<valueDef value="6" description=""/>
+<valueDef value="7" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_grupy" id="22315524-662E-D747-BD7B-A2D85C8396C7">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>97F16701-1A2D-11DD-B9DD-B333EB9281BA</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_sali" id="8AC42094-EA36-06CA-B5A0-D23418BF681A">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>1ADA2207-FBAA-BF0D-065F-A22EFF20AD79</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1026E133-CEA9-2B2E-E388-4675511F992B" referredColumn="E06549AC-CE4A-D0B4-15B6-3618EADDD3C1"/>
+</associations>
+</Column>
+<Column name="Id_przedmiotu" id="F9CC83C5-90D0-6F81-A6F9-22FA8B69E282">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>96887DF2-52C0-AFB5-2566-1F32564A827F</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4BDA852-D37B-0AE6-050B-C50D92B75F7F" referredColumn="6B98EA61-EBCF-3C9E-DCE0-C1ACE135C6B1"/>
+</associations>
+</Column>
+<Column name="Id_pracownika" id="2D2A0509-8B7B-F8B4-5073-6C27D72BFCED">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>4F89AE5A-B424-7590-790C-B4B698779219</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E54C110-7C43-81EF-1CA8-3876B05F2138" referredColumn="92CABB28-6BA9-2077-A2F9-6457EE34F7D5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="33C79BFC-6370-F3FD-1509-F35A943DA01A" name="Zajecia_PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>72616C4D-5BBF-28B7-F9B6-EF7A5D73F91E</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CDA9950-92FC-54AC-07B3-DA273676F111"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4E1B5B3-AE15-F622-C8D0-275C41CBD2F1" name="Zajecia_Sala_FK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>AD806508-EDE3-CA9F-0CB7-13AE24175F70</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8AC42094-EA36-06CA-B5A0-D23418BF681A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A792A72E-5157-0132-B0A3-EF086DC7682A" name="Zajecia_Przedmiot_FK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>FE090A3E-C58F-12D1-CAB5-3E3C503C453C</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9CC83C5-90D0-6F81-A6F9-22FA8B69E282"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA793666-079D-5A28-A221-EF2AD961CF43" name="Zajecia_Pracownik_FK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>7CAA6CE8-2F6B-9FD2-F7E8-112AC03D928C</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D2A0509-8B7B-F8B4-5073-6C27D72BFCED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

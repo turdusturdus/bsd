@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC527CB7-CAD5-83CA-5BE5-EF48080A2CCF" name="Kierunek">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>7D75CD69-4DEF-1195-7EE3-630D75E664D6</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_kierunku" id="C8CB9341-F11A-E0F6-B65B-A99706EEC608">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>5F91D3B8-2A33-C37A-7B87-B01E70D2C6E8</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwa" id="2E45C358-7E5C-FE85-F29F-A434A0EEADBC">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>4C3E07E3-DF73-E138-4D6E-A3D0C32605CD</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E41D986F-D5FC-2C52-FF4F-A7119B7F5DBA" name="Kierunek_PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>99E8DB6D-00B6-F967-0C41-E07279BE760A</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8CB9341-F11A-E0F6-B65B-A99706EEC608"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

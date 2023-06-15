@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2FFB2E41-8E2D-37A2-FFED-C03805E4D31A" name="Sala">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:18:42 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nr_sali" id="ACAB397D-0245-47E2-3D66-BE25C14E2471">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:19:24 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Typ" id="7EB1237F-9D96-97C5-D037-D76D95CDC8E9">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:20:13 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="cwiczeniowa" description=""/>
+<valueDef value="komputerowa" description=""/>
+<valueDef value="laboratoryjna" description=""/>
+<valueDef value="wykladowa" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_budynku" id="AF0C1A32-141B-14C4-F7FA-88856268D44A">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:26:28 UTC</createdTime>
+<generatorID>3201ADFD-2BF8-736D-4A12-58C233D3ECA7</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>C577B0F4-657B-B058-0AC3-E212FBD65D54</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ED9CA522-CFE1-EDC4-0D61-8D7FCAD26142" name="Sala PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:19:22 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>ACAB397D-0245-47E2-3D66-BE25C14E2471</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

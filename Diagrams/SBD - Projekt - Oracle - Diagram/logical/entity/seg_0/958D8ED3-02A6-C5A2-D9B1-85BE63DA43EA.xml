@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="958D8ED3-02A6-C5A2-D9B1-85BE63DA43EA" name="Przedmiot">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:37:11 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_przedmiotu" id="1483F08E-8154-1C62-3310-70D54222DEF5">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:37:23 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa" id="77ACC914-11AE-C007-5625-FC7CAEB890B3">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:37:42 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Typ" id="C22C2C85-0BE4-05C9-A62C-5F5774EE5462">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:37:57 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="CW" description=""/>
+<valueDef value="L" description=""/>
+<valueDef value="LEK" description=""/>
+<valueDef value="PS" description=""/>
+<valueDef value="SEM" description=""/>
+<valueDef value="W" description=""/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Semestr" id="6B891757-6AC1-A85C-5B7C-23CAFFBBA19A">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:38:50 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_kierunku" id="F25DE9F2-95AF-6914-9CF6-5E37766C2A41">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:47:45 UTC</createdTime>
+<generatorID>9A2DFA1A-227D-C49D-A69A-174CE68EAE42</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>5F91D3B8-2A33-C37A-7B87-B01E70D2C6E8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="27E61FC9-6A04-E93A-23B1-57BFF7C33FE7" name="Przedmiot PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:37:35 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1483F08E-8154-1C62-3310-70D54222DEF5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

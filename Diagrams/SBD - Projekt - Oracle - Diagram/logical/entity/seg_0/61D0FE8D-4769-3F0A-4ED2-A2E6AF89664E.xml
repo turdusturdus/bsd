@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="61D0FE8D-4769-3F0A-4ED2-A2E6AF89664E" name="Zajecia_studenta">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:45:11 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_zajec" id="172D193C-2575-1690-4BC1-2C6883694356">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:47:06 UTC</createdTime>
+<generatorID>1AF8FB77-FAA8-71C9-A075-816332F5CAB8</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>45E43846-B64F-53B3-AB69-725B5299BD00</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr_indeksu" id="4C07D9B0-00B8-B962-AF0A-7ADBEAC1149D">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:47:21 UTC</createdTime>
+<generatorID>9003929F-AA0D-338E-3AC8-855EF6E9FC4F</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>C02CDF91-56B7-F3DA-1875-0545D293755C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

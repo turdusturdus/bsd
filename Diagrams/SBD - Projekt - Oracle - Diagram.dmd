@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SBD - Projekt - Oracle - Diagram" id="71F2CB09-D3F8-3ADA-3754-E90B556EA224" version="3.5">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-26 15:33:30 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - LK - Oracle</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>71F2CB09-D3F8-3ADA-3754-E90B556EA224</designId>
+</OSDM_Design>

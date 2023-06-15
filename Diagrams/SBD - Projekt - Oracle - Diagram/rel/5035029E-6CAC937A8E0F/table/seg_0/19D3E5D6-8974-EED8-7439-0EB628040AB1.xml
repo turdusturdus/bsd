@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="19D3E5D6-8974-EED8-7439-0EB628040AB1" name="Zajecia_studenta">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>61D0FE8D-4769-3F0A-4ED2-A2E6AF89664E</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_zajec" id="2CB13021-F40F-248B-1264-032FADE53193">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>172D193C-2575-1690-4BC1-2C6883694356</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5E5D310-E688-A94F-DF43-37E1B7E9A549" referredColumn="9CDA9950-92FC-54AC-07B3-DA273676F111"/>
+</associations>
+</Column>
+<Column name="Nr_indeksu" id="730F4023-B72F-17D9-FEA1-8AFB1DC55CF0">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>4C07D9B0-00B8-B962-AF0A-7ADBEAC1149D</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="39C576AD-935F-D223-139E-99F21A909828" referredColumn="5D281889-6B97-8FDC-22EA-DBBA18AC5C3E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5618D55B-A380-E856-B550-66672753A21C" name="Zajecia_studenta_PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:25:49 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB13021-F40F-248B-1264-032FADE53193"/>
+<colUsage columnID="730F4023-B72F-17D9-FEA1-8AFB1DC55CF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B8BF265-A5E6-B660-430E-5491D8998584" name="Zajecia_zajecia_FK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>1AF8FB77-FAA8-71C9-A075-816332F5CAB8</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CB13021-F40F-248B-1264-032FADE53193"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="698A6F6E-0F0A-30BD-4D0F-EB695D00387F" name="Zajecia_student_FK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 15:03:54 UTC</createdTime>
+<generatorID>9003929F-AA0D-338E-3AC8-855EF6E9FC4F</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="730F4023-B72F-17D9-FEA1-8AFB1DC55CF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

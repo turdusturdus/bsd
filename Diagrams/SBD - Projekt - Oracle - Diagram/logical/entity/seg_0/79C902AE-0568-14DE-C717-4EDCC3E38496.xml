@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79C902AE-0568-14DE-C717-4EDCC3E38496" name="Zajecia">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:20:44 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_zajec" id="45E43846-B64F-53B3-AB69-725B5299BD00">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:20:53 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Godz_rozpoczecia" id="33C33AD7-C441-FD87-1D7E-41084ADABBCD">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:21:51 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Godz_zakonczenia" id="390F2AC1-5D5F-780B-06F2-D054D3BC6DDC">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-13 11:04:26 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Dzien_tygodnia" id="56F276AD-74ED-9547-669A-348D21551B76">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:26:01 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr_grupy" id="97F16701-1A2D-11DD-B9DD-B333EB9281BA">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:27:24 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr_sali" id="1ADA2207-FBAA-BF0D-065F-A22EFF20AD79">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:46:50 UTC</createdTime>
+<generatorID>AD806508-EDE3-CA9F-0CB7-13AE24175F70</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>ACAB397D-0245-47E2-3D66-BE25C14E2471</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_przedmiotu" id="96887DF2-52C0-AFB5-2566-1F32564A827F">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:47:34 UTC</createdTime>
+<generatorID>FE090A3E-C58F-12D1-CAB5-3E3C503C453C</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>1483F08E-8154-1C62-3310-70D54222DEF5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_pracownika" id="4F89AE5A-B424-7590-790C-B4B698779219">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-06-11 14:48:34 UTC</createdTime>
+<generatorID>7CAA6CE8-2F6B-9FD2-F7E8-112AC03D928C</generatorID>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<referedAttribute>E1268AC2-B0C6-E623-A765-F820A03FCD57</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="72616C4D-5BBF-28B7-F9B6-EF7A5D73F91E" name="Zajecia PK">
+<createdBy>Halinka</createdBy>
+<createdTime>2023-05-27 12:21:03 UTC</createdTime>
+<ownerDesignName>SBD - Projekt - Oracle - Diagram</ownerDesignName>
+<engineerTo>
+<item key="5035029E-1C01-C368-CF1D-6CAC937A8E0F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>45E43846-B64F-53B3-AB69-725B5299BD00</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
