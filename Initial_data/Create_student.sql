@@ -1,12 +1,12 @@
-CREATE OR REPLACE PACKAGE manage_student AS
+CREATE OR REPLACE PACKAGE create_student AS
     PROCEDURE stworz_studenta(p_semestr INTEGER);
     PROCEDURE przypisz_studenta(p_indeks INTEGER, p_grupa INTEGER, p_semestr INTEGER, p_kierunek VARCHAR2);
     PROCEDURE dodaj_studentow_i_przypisz(p_grupa INTEGER, p_semestr INTEGER, p_kierunek VARCHAR2);
     PROCEDURE dodaj_studentow_all(p_parzysty BOOLEAN);
-END manage_student;
+END create_student;
 /
 
-CREATE OR REPLACE PACKAGE BODY manage_student AS
+CREATE OR REPLACE PACKAGE BODY create_student AS
     PROCEDURE stworz_studenta(p_semestr INTEGER) IS
         v_indeks student.nr_indeksu%TYPE;
         v_imie_nazwisko student.imie_nazwisko%TYPE;
@@ -77,6 +77,6 @@ CREATE OR REPLACE PACKAGE BODY manage_student AS
             DBMS_OUTPUT.PUT_LINE('Nieoczekiwany błąd: '||SQLCODE||', '||SQLERRM);
     END dodaj_studentow_all;
     
-END manage_student;
+END create_student;
 /
 

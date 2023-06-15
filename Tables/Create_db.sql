@@ -107,20 +107,3 @@ ALTER TABLE zajecia_studenta
 ALTER TABLE zajecia_studenta
     ADD CONSTRAINT zajecia_zajecia_fk FOREIGN KEY ( id_zajec )
         REFERENCES zajecia ( id_zajec );
-
-ALTER TABLE zajecia
-    ADD CONSTRAINT check_time CHECK (
-        EXTRACT(HOUR FROM godz_rozpoczecia) >= 8 AND
-        EXTRACT(HOUR FROM godz_rozpoczecia) <= 19 AND
-        (EXTRACT(HOUR FROM godz_rozpoczecia) != 19 OR EXTRACT(MINUTE FROM godz_rozpoczecia) <= 30)
-    );
-
-ALTER TABLE zajecia
-    ADD CONSTRAINT check_duration CHECK (
-        godz_zakonczenia = godz_rozpoczecia + INTERVAL '90' MINUTE
-    );
-
-ALTER TABLE zajecia
-    ADD CONSTRAINT unique_przedmiot_grupa UNIQUE (id_przedmiotu, nr_grupy);
-
-CREATE INDEX idx_przedmiot_typ ON przedmiot (typ);

@@ -1,0 +1,1 @@
+CREATE INDEX idx_przedmiot_typ ON przedmiot (typ);

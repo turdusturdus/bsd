@@ -1,4 +1,4 @@
-CREATE OR REPLACE PACKAGE manage_zajecia AS
+CREATE OR REPLACE PACKAGE create_zajecia AS
 
   FUNCTION mapuj_typ_przedmiotu_na_sale (typ_przedmiotu VARCHAR2) RETURN VARCHAR2;
 
@@ -11,10 +11,10 @@ CREATE OR REPLACE PACKAGE manage_zajecia AS
     godz_rozpoczecia TIMESTAMP
   );
 
-END manage_zajecia;
+END create_zajecia;
 /
 
-CREATE OR REPLACE PACKAGE BODY manage_zajecia AS
+CREATE OR REPLACE PACKAGE BODY create_zajecia AS
 
   FUNCTION mapuj_typ_przedmiotu_na_sale (typ_przedmiotu VARCHAR2) RETURN VARCHAR2
   AS
@@ -29,49 +29,49 @@ CREATE OR REPLACE PACKAGE BODY manage_zajecia AS
   END mapuj_typ_przedmiotu_na_sale;
 
   PROCEDURE utworz_wyklady (dzien_tygodnia INTEGER, godz_rozpoczecia TIMESTAMP)
-AS
-  CURSOR pracownicy_cur IS
-    SELECT id_pracownika
-    FROM pracownik;
+  AS
+    CURSOR pracownicy_cur IS
+      SELECT id_pracownika
+      FROM pracownik;
 
-  CURSOR sale_cur IS
-    SELECT nr_sali
-    FROM sala
-    WHERE typ = 'wykladowa';
+    CURSOR sale_cur IS
+      SELECT nr_sali
+      FROM sala
+      WHERE typ = 'wykladowa';
 
-  CURSOR przedmioty_cur IS
-    SELECT id_przedmiotu
-    FROM przedmiot
-    WHERE typ = 'W';
+    CURSOR przedmioty_cur IS
+      SELECT id_przedmiotu
+      FROM przedmiot
+      WHERE typ = 'W';
 
-  pracownik pracownicy_cur%ROWTYPE;
-  sala sale_cur%ROWTYPE;
-  przedmiot przedmioty_cur%ROWTYPE;
-  godz_zakonczenia TIMESTAMP := godz_rozpoczecia + INTERVAL '90' MINUTE;
-BEGIN
-  OPEN pracownicy_cur;
-  OPEN sale_cur;
-  OPEN przedmioty_cur;
-
-  FETCH pracownicy_cur INTO pracownik;
-  FETCH sale_cur INTO sala;
-  FETCH przedmioty_cur INTO przedmiot;
-  
-  WHILE pracownicy_cur%FOUND AND sale_cur%FOUND AND przedmioty_cur%FOUND
-  LOOP
-    INSERT INTO zajecia (id_zajec, godz_rozpoczecia, godz_zakonczenia, dzien_tygodnia, nr_sali, id_przedmiotu, id_pracownika)
-    VALUES (zajecia_seq.NEXTVAL, godz_rozpoczecia, godz_zakonczenia, dzien_tygodnia, sala.nr_sali, przedmiot.id_przedmiotu, pracownik.id_pracownika);
+    pracownik pracownicy_cur%ROWTYPE;
+    sala sale_cur%ROWTYPE;
+    przedmiot przedmioty_cur%ROWTYPE;
+    godz_zakonczenia TIMESTAMP := godz_rozpoczecia + INTERVAL '90' MINUTE;
+  BEGIN
+    OPEN pracownicy_cur;
+    OPEN sale_cur;
+    OPEN przedmioty_cur;
 
     FETCH pracownicy_cur INTO pracownik;
     FETCH sale_cur INTO sala;
     FETCH przedmioty_cur INTO przedmiot;
-  END LOOP;
+    
+    WHILE pracownicy_cur%FOUND AND sale_cur%FOUND AND przedmioty_cur%FOUND
+    LOOP
+      INSERT INTO zajecia (id_zajec, godz_rozpoczecia, godz_zakonczenia, dzien_tygodnia, nr_sali, id_przedmiotu, id_pracownika)
+      VALUES (zajecia_seq.NEXTVAL, godz_rozpoczecia, godz_zakonczenia, dzien_tygodnia, sala.nr_sali, przedmiot.id_przedmiotu, pracownik.id_pracownika);
 
-  CLOSE pracownicy_cur;
-  CLOSE sale_cur;
-  CLOSE przedmioty_cur;
+      FETCH pracownicy_cur INTO pracownik;
+      FETCH sale_cur INTO sala;
+      FETCH przedmioty_cur INTO przedmiot;
+    END LOOP;
 
-END utworz_wyklady;
+    CLOSE pracownicy_cur;
+    CLOSE sale_cur;
+    CLOSE przedmioty_cur;
+
+  END utworz_wyklady;
 
   PROCEDURE utworz_zajecia_dla_przedmiotow (
     typ_przedmiotu VARCHAR2,
@@ -144,6 +144,6 @@ END utworz_wyklady;
       DBMS_OUTPUT.PUT_LINE('Brak wystarczajacej liczby przedmiotow, sal lub pracownikow');
   END utworz_zajecia_dla_przedmiotow;
 
-END manage_zajecia;
+END create_zajecia;
 /
 

@@ -83,11 +83,12 @@ BEGIN
     JOIN przedmiot p ON p.id_przedmiotu = z.id_przedmiotu
     WHERE (z.nr_grupy = :NEW.nr_grupy OR p.typ = 'W') AND
           p.semestr = (SELECT semestr FROM przedmiot WHERE id_przedmiotu = :NEW.id_przedmiotu) AND
+          p.id_kierunku = (SELECT id_kierunku FROM przedmiot WHERE id_przedmiotu = :NEW.id_przedmiotu) AND
           z.dzien_tygodnia = :NEW.dzien_tygodnia AND
           kolizja_zajec(z.godz_rozpoczecia, z.godz_zakonczenia, :NEW.godz_rozpoczecia, :NEW.godz_zakonczenia) = 1;
 
     IF istniejace_zajecia > 0 THEN
-        RAISE_APPLICATION_ERROR(-20005, 'Dla tej samej grupy i semestru lub w czasie wykładu odbywają się już zajęcia');
+        RAISE_APPLICATION_ERROR(-20005, 'Dla tej samej grupy, kierunku i semestru lub w czasie wykładu odbywają się już zajęcia');
     END IF;
 END;
 /
