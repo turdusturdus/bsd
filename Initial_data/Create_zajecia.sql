@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE manage_zajecia AS
 
   FUNCTION mapuj_typ_przedmiotu_na_sale (typ_przedmiotu VARCHAR2) RETURN VARCHAR2;
 
-  PROCEDURE utworz_zajecia (dzien_tygodnia INTEGER, godz_rozpoczecia TIMESTAMP);
+  PROCEDURE utworz_wyklady (dzien_tygodnia INTEGER, godz_rozpoczecia TIMESTAMP);
 
   PROCEDURE utworz_zajecia_dla_przedmiotow (
     typ_przedmiotu VARCHAR2,
@@ -28,7 +28,7 @@ CREATE OR REPLACE PACKAGE BODY manage_zajecia AS
     END CASE;
   END mapuj_typ_przedmiotu_na_sale;
 
-  PROCEDURE utworz_zajecia (dzien_tygodnia INTEGER, godz_rozpoczecia TIMESTAMP)
+  PROCEDURE utworz_wyklady (dzien_tygodnia INTEGER, godz_rozpoczecia TIMESTAMP)
 AS
   CURSOR pracownicy_cur IS
     SELECT id_pracownika
@@ -71,7 +71,7 @@ BEGIN
   CLOSE sale_cur;
   CLOSE przedmioty_cur;
 
-END utworz_zajecia;
+END utworz_wyklady;
 
   PROCEDURE utworz_zajecia_dla_przedmiotow (
     typ_przedmiotu VARCHAR2,
