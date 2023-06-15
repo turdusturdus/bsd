@@ -1,66 +1,74 @@
-CREATE OR REPLACE PACKAGE queries AS
-
-PROCEDURE zajecia_studenta(p_id_studenta INTEGER);
-PROCEDURE zajecia_pracownika(p_id_pracownika INTEGER);
-PROCEDURE studenci_na_zajeciach(p_id_zajec INTEGER);
-PROCEDURE studenci_semestr_kierunek(p_semestr INTEGER, p_id_kierunku INTEGER);
-PROCEDURE zajecia_w_sali(p_nr_sali VARCHAR2);
-PROCEDURE pracownicy_studenta(p_id_studenta INTEGER);
-
-END queries;
-/
-
-CREATE OR REPLACE PACKAGE BODY queries AS
-
-PROCEDURE zajecia_studenta(p_id_studenta INTEGER) IS
+DECLARE
+  ref_cur SYS_REFCURSOR;
+  z_row zajecia_studenta_vw%ROWTYPE;
+  start_time NUMBER;
+  end_time NUMBER;
 BEGIN
-    SELECT z.*, p.*
-    FROM zajecia z
-    JOIN przedmiot p ON z.id_przedmiotu = p.id_przedmiotu
-    JOIN zajecia_studenta zs ON z.id_zajec = zs.id_zajec
-    WHERE zs.nr_indeksu = p_id_studenta;
-END zajecia_studenta;
+  start_time := DBMS_UTILITY.GET_TIME;
+  ref_cur := selectors.zajecia_studenta(2479);
+  FETCH ref_cur INTO z_row;
+  WHILE ref_cur%FOUND LOOP
+    dbms_output.put_line(z_row.nazwa || ' ' || z_row.godz_rozpoczecia || '-' || z_row.godz_zakonczenia);
+    FETCH ref_cur INTO z_row;
+  END LOOP;
+  CLOSE ref_cur;
+  end_time := DBMS_UTILITY.GET_TIME;
+  dbms_output.put_line('Elapsed time: ' || TO_CHAR(end_time - start_time) || ' centiseconds.');
+END;
 
-PROCEDURE zajecia_pracownika(p_id_pracownika INTEGER) IS
+DECLARE
+  ref_cur SYS_REFCURSOR;
+  z_row zajecia_w_sali_vw%ROWTYPE;
+  start_time NUMBER;
+  end_time NUMBER;
 BEGIN
-    SELECT z.*, p.*
-    FROM zajecia z
-    JOIN przedmiot p ON z.id_przedmiotu = p.id_przedmiotu
-    WHERE z.id_pracownika = p_id_pracownika;
-END zajecia_pracownika;
+  start_time := DBMS_UTILITY.GET_TIME;
+  ref_cur := selectors.zajecia_w_sali('61');
+  FETCH ref_cur INTO z_row;
+  WHILE ref_cur%FOUND LOOP
+    dbms_output.put_line(z_row.nazwa || ' ' || z_row.godz_rozpoczecia || '-' || z_row.godz_zakonczenia);
+    FETCH ref_cur INTO z_row;
+  END LOOP;
+  CLOSE ref_cur;
+  end_time := DBMS_UTILITY.GET_TIME;
+  dbms_output.put_line('Elapsed time: ' || TO_CHAR(end_time - start_time) || ' centiseconds.');
+END;
 
-PROCEDURE studenci_na_zajeciach(p_id_zajec INTEGER) IS
+
+DECLARE
+  ref_cur SYS_REFCURSOR;
+  z_row zajecia_pracownika_vw%ROWTYPE;
+  start_time NUMBER;
+  end_time NUMBER;
 BEGIN
-    SELECT s.*
-    FROM student s
-    JOIN zajecia_studenta zs ON s.nr_indeksu = zs.nr_indeksu
-    WHERE zs.id_zajec = p_id_zajec;
-END studenci_na_zajeciach;
+  start_time := DBMS_UTILITY.GET_TIME;
+  ref_cur := selectors.zajecia_pracownika(1); -- Wprowadź prawidłowy id_pracownika
+  FETCH ref_cur INTO z_row;
+  WHILE ref_cur%FOUND LOOP
+    dbms_output.put_line(z_row.nazwa || ' ' || z_row.godz_rozpoczecia || '-' || z_row.godz_zakonczenia);
+    FETCH ref_cur INTO z_row;
+  END LOOP;
+  CLOSE ref_cur;
+  end_time := DBMS_UTILITY.GET_TIME;
+  dbms_output.put_line('Elapsed time: ' || TO_CHAR(end_time - start_time) || ' centiseconds.');
+END;
 
-PROCEDURE studenci_semestr_kierunek(p_semestr INTEGER, p_id_kierunku INTEGER) IS
+DECLARE
+  ref_cur SYS_REFCURSOR;
+  z_row pracownik_student_vw%ROWTYPE;
+  start_time NUMBER;
+  end_time NUMBER;
 BEGIN
-    SELECT s.*
-    FROM student s
-    JOIN przedmiot p ON s.semestr = p.semestr
-    WHERE p.semestr = p_semestr AND p.id_kierunku = p_id_kierunku;
-END studenci_semestr_kierunek;
+  start_time := DBMS_UTILITY.GET_TIME;
+  ref_cur := selectors.pracownik_student(2479);
+  FETCH ref_cur INTO z_row;
+  WHILE ref_cur%FOUND LOOP
+    dbms_output.put_line(z_row.imie_nazwisko);
+    FETCH ref_cur INTO z_row;
+  END LOOP;
+  CLOSE ref_cur;
+  end_time := DBMS_UTILITY.GET_TIME;
+  dbms_output.put_line('Elapsed time: ' || TO_CHAR(end_time - start_time) || ' centiseconds.');
+END;
 
-PROCEDURE zajecia_w_sali(p_nr_sali VARCHAR2) IS
-BEGIN
-    SELECT z.*, p.*
-    FROM zajecia z
-    JOIN przedmiot p ON z.id_przedmiotu = p.id_przedmiotu
-    WHERE z.nr_sali = p_nr_sali;
-END zajecia_w_sali;
 
-PROCEDURE pracownicy_studenta(p_id_studenta INTEGER) IS
-BEGIN
-    SELECT DISTINCT pr.*
-    FROM pracownik pr
-    JOIN zajecia z ON pr.id_pracownika = z.id_pracownika
-    JOIN zajecia_studenta zs ON z.id_zajec = zs.id_zajec
-    WHERE zs.nr_indeksu = p_id_studenta;
-END pracownicy_studenta;
-
-END queries;
-/
