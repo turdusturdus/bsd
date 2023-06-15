@@ -123,3 +123,4 @@ ALTER TABLE zajecia
 ALTER TABLE zajecia
     ADD CONSTRAINT unique_przedmiot_grupa UNIQUE (id_przedmiotu, nr_grupy);
 
+CREATE INDEX idx_przedmiot_typ ON przedmiot (typ);

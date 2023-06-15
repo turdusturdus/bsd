@@ -18,4 +18,9 @@ CREATE OR REPLACE VIEW pracownik_student_vw AS
     SELECT DISTINCT pr.*, zs.nr_indeksu
     FROM pracownik pr
     JOIN zajecia z ON pr.id_pracownika = z.id_pracownika
-    JOIN zajecia_studenta zs ON z.id_zajec = zs.id_zajec;   
+    JOIN zajecia_studenta zs ON z.id_zajec = zs.id_zajec;
+    
+CREATE OR REPLACE VIEW zajecia_wg_typu_vw AS
+    SELECT z.*, p.typ
+    FROM zajecia z
+    JOIN przedmiot p ON z.id_przedmiotu = p.id_przedmiotu;
